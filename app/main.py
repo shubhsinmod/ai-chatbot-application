@@ -80,7 +80,7 @@ class CrawlIn(BaseModel):
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "chunks": rag.count()}
+    return {"status": "ok"}
 
 
 @app.post("/api/chat", dependencies=[Depends(_limit)])
